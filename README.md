@@ -1,3 +1,17 @@
+# Why this fork?
+This fork was done due to a [stalled issue](https://github.com/redhat-developer/vscode-yaml/issues/929) which finds its fix in [this commit](https://github.com/redhat-developer/vscode-redhat-telemetry/commit/02db55f86af66be209c5c754ae4528cf1bf064b1).
+
+The fix is released in [vscode-redhat-telemetry v0.7.0](https://github.com/redhat-developer/vscode-redhat-telemetry/releases/tag/0.7.0) but hasn't been bumped yet which is a blocker for Kestra's VSCode extension as it prevents autocompletion for any linux user.
+
+The only goal of this fork is to bump the dependency and allow manual build & put in our UI for it to work for every user.
+
+# How to build & load inside VSCode editor
+- `yarn build`
+- put inside https://github.com/kestra-io/kestra/tree/develop/ui/public/yamlExt the following structure (take dist folder and remaining files from the root folder of this repository):
+
+![img.png](img.png)
+---
+# Original README
 [![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/v/redhat.vscode-yaml?style=for-the-badge&label=VS%20Marketplace&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/redhat.vscode-yaml?style=for-the-badge&logo=microsoft)](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/redhat-developer/vscode-yaml/CI.yaml?branch=main&style=for-the-badge&logo=github)](https://github.com/redhat-developer/vscode-yaml/actions?query=workflow:CI)
